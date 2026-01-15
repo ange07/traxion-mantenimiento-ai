@@ -16,41 +16,112 @@
 
 <!--Formulario-->
 
-        <form action="#" method="post">
+       <form action="#" method="post">
+        <h2>Datos de la unidad</h2>
 
-            <h2>Datos de la unidad</h2>
+        <div>
+            <h3>Identificación</h3>
 
-            <label for="nombre">Nivel de aceite:</label><br>
-            <input type="number" id="dato_de_formulario" name="nivel de aceite" required><br>
+            <label for="unidad_id">ID </label>
+            <input type="text" id="unidad_id" name="unidad_id" required placeholder="Ej. TX-01234">
 
-            <label for="nombre">Presión de neumáticos:</label><br>
-            <input type="number" id="dato_de_formulario" name="Presión de neumáticos" required><br>
+            <label for="placas">Placas</label>
+            <input type="text" id="placas" name="placas" placeholder="Ej. ABC-123-D">
 
-            <label for="nombre">Luces funcionando:</label><br>
-            <input type="number" id="dato_de_formulario" name="Luces funcionando" required><br>
+            <label for="marca">Marca</label>
+            <select id="marca" name="marca" required>
+                <option value="">Selecciona…</option>
+                <option value="Toyota">Toyota</option>
+                <option value="Ford">Ford</option>
+                <option value="volvo">Volvo</option>
+                <option value="otra">Otra</option>
+            </select>
 
-            <label for="nombre">Frenos responden bien:</label><br>
-            <input type="number" id="dato_de_formulario" name="Frenos responden bien" required><br>
+            <label for="tipo_unidad">Tipo de unidad</label>
+            <select id="tipo_unidad" name="tipo_unidad" required>
+                <option value="">Selecciona…</option>
+                <option value="tractocamion">Tractocamión</option>
+                <option value="camioneta">camioneta</option>
+                <option value="otro">Otro</option>
+            </select>
 
-            <label for="nombre">Nivel de líquido de frenos:</label><br>
-            <input type="number" id="dato_de_formulario" name="Nivel de líquido de frenos" required><br>
+            <label for="kilometraje">Kilometraje</label>
+            <input type="number" id="kilometraje" name="kilometraje" required min="0" step="1" placeholder="Ej. 245000">
+        </div>
 
-            <label for="email">Correo electronico:</label>
-            <input type="email" id="dato_de_formulario" name="correo electronico" required><br>
+  <div>
+    <h3>Checklist mecánico</h3>
 
-            <label for="mensaje">Mensaje adicional:</label><br>
-            <textarea name="mensaje" id="dato_de_formulario" rows="4" required></textarea><br>
+    <label for="nivel_aceite">Nivel de aceite</label>
+    <select id="nivel_aceite" name="nivel_aceite" required>
+      <option value="">Selecciona…</option>
+      <option value="ok">OK</option>
+      <option value="bajo">Bajo</option>
+      <option value="critico">Crítico</option>
+    </select>
 
-            <input type="submit" value="Enviar">
-            <button type="submit">Evaluar (demo)</button>
-            
-        </form>
-<!--Formulario-->
+    <label for="presion_neumaticos">Presión de neumáticos</label>
+    <select id="presion_neumaticos" name="presion_neumaticos" required>
+      <option value="">Selecciona…</option>
+      <option value="ok">OK</option>
+      <option value="baja">Baja</option>
+      <option value="muy_baja">Muy baja</option>
+    </select>
 
+    <label for="luces_funcionando">Luces funcionando</label>
+    <select id="luces_funcionando" name="luces_funcionando" required>
+      <option value="">Selecciona…</option>
+      <option value="si">Sí</option>
+      <option value="no">No</option>
+    </select>
+
+    <label for="frenos_ok">Frenos responden bien</label>
+    <select id="frenos_ok" name="frenos_ok" required>
+      <option value="">Selecciona…</option>
+      <option value="si">Sí</option>
+      <option value="no">No</option>
+    </select>
+
+    <label for="liquido_frenos">Nivel de líquido de frenos</label>
+    <select id="liquido_frenos" name="liquido_frenos" required>
+      <option value="">Selecciona…</option>
+      <option value="ok">OK</option>
+      <option value="bajo">Bajo</option>
+      <option value="critico">Crítico</option>
+    </select>
+
+    <label for="codigos_falla">Códigos de falla (telemetría)</label>
+    <input type="text" id="codigos_falla" name="codigos_falla" placeholder="Ej. P0420, P0301">
+</div>
+
+
+  <div>
+    <h3>Operación</h3>
+
+    <label for="condicion_operacion">Condición de operación</label>
+    <select id="condicion_operacion" name="condicion_operacion" required>
+      <option value="">Selecciona…</option>
+      <option value="urbano">Urbano (alto tráfico)</option>
+      <option value="carretera">Carretera</option>
+      <option value="mixto">Mixto</option>
+      <option value="pendientes">Ruta con pendientes</option>
+      <option value="clima_extremo">Clima extremo_
+
+    </div>
+
+
+    <input type="submit" value="Enviar">
+
+<!--Fin de Formulario-->
 
     </main>
 
+<!--Footer-->
 
+    <footer>
+        Propiedad intelectual del Traxion y su contenido:
+            D.R. © Mantenimientos preventivos Traxion. Todos los derechos reservados.
+    </footer>
 
 </body>
 </html>
