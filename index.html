@@ -1,46 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traxión | Sistema de Mantenimiento Preventivo</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Prototipo de mantenimiento</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 </head>
 <body>
+    <!-- NAVBAR -->
 
-    <header>
-       
-        <img class="logo" src="Traxion.png" alt="traxion logo">
-        
-        <div>
-            <strong>TRAXION</strong><br>
-            <small>VIDA EN MOVIMIENTO</small>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <img src="Traxion.png" alt="Traxión Logo" class="nav-logo">
+                <span class="brand-text">TRAXIÓN <small>Vida en Movimiento</small></span>
+            </div>
+            <div class="nav-center">
+                <a href="#inicio" class="nav-link active">
+                    <i class="fas fa-home"></i> Inicio
+                </a>
+                <a href="#reporte" class="nav-link">
+                    <i class="fas fa-clipboard-check"></i> Reporte 360°
+                </a>
+                <a href="#historial" class="nav-link">
+                    <i class="fas fa-history"></i> Historial
+                </a>
+            </div>
+            <div class="nav-right">
+                <div class="user-profile">
+                    <span class="user-name">Operador</span>
+                    <div class="avatar"><i class="fas fa-user"></i></div>
+                </div>
+            </div>
         </div>
+    </nav>
 
-        <nav class="navlinks">
-            <a href="#que-es">Nuestro proposito</a>
-            <a href="#por-que">Formulario</a>
-            <a href="#por-que">Nuestra IA</a>
-        </nav>
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
 
-        <div>
-            <h1>Sistema preventivo de flota con IA</h1>
-            <h2>Hackathon Bécalos Traxión Tech Challenge</h2>
-        </div>
+        <!-- HERO / BIENVENIDA -->
 
-    </header>
-
-    <main>
-
-    <section id="enfoque">
-        <h3>Nuestro proposito</h3>
-        <p>
-            Este documento presenta una propuesta para erradicar la pérdida de información de las unidades a reparar
-            para tener un mantenimiento preventivo y correctivo para las unidades en uso, así mismo tener la mayoría
-            de las unidades en usabilidad. También estaremos erradicando las pérdidas económicas para la organización
-            teniendo todas las unidades de la flota en uso.
-        </p>
-    </section>
+        <section class="hero-section" id="inicio">
+            <div class="hero-content">
+                <h1>Sistema de Mantenimiento Preventivo</h1>
+                <p class="hero-subtitle">
+                    Completa tu reporte de salida antes de iniciar ruta. 
+                    Si detectas algún problema, usa <strong>Trax-Bot</strong> en cualquier momento.
+                </p>
+            </div>
+        </section>
 
 <!--Formulario-->
 
