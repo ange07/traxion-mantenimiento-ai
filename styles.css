@@ -425,6 +425,51 @@ body {
 }
 
 /* ===================================
+   COOKIE BANNER
+   =================================== */
+.cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(26, 26, 26, 0.95);
+    color: var(--white);
+    padding: 15px 25px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 2000;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    width: 90%;
+    max-width: 600px;
+}
+
+.cookie-banner p {
+    font-size: 13px;
+    flex: 1;
+}
+
+.cookie-banner a {
+    color: var(--traxion-lime);
+    text-decoration: underline;
+}
+
+.cookie-banner button {
+    background: var(--traxion-lime);
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.cookie-banner button:hover {
+    transform: scale(1.05);
+}
+
+/* ===================================
    CHATBOT FLOTANTE
    =================================== */
 
