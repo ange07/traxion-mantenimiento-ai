@@ -53,106 +53,139 @@
         </section>
 
 <!--Formulario-->
+<!-- FORMULARIO DE REPORTE 360° -->
+        <section class="form-section" id="reporte">
+            <form class="report-form" id="formulario-reporte">
+                
+                <!-- Header del Formulario -->
+                <div class="form-title-card">
+                    <h2><i class="fas fa-clipboard-list"></i> Reporte de Salida 360°</h2>
+                    <p>Completa esta inspección antes de salir a ruta</p>
+                </div>
 
-       <form class="form" action="#" method="post">
-        <h2>Datos de la unidad</h2>
+                <!-- CARD 1: Datos de Unidad -->
+                <div class="form-card">
+                    <div class="card-header">
+                        <i class="fas fa-truck"></i>
+                        <h3>Datos de la Unidad</h3>
+                    </div>
+                    <p class="card-subtitle">Identifica tu vehículo</p>
+                    
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="unidad_id">ID Económico</label>
+                            <input type="text" id="unidad_id" name="unidad_id" required placeholder="Ej. TX-01234">
+                        </div>
+                        <div class="input-group">
+                            <label for="placas">Placas</label>
+                            <input type="text" id="placas" name="placas" placeholder="Ej. ABC-123-D">
+                        </div>
+                    </div>
 
-        <div>
-            <h3>Identificación</h3>
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="kilometraje">Kilometraje</label>
+                            <input type="number" id="kilometraje" name="kilometraje" placeholder="245000">
+                        </div>
+                        <div class="input-group">
+                            <label for="marca">Marca</label>
+                            <select id="marca" name="marca">
+                                <option value="">Selecciona...</option>
+                                <option value="Volvo">Volvo</option>
+                                <option value="Kenworth">Kenworth</option>
+                                <option value="Freightliner">Freightliner</option>
+                                <option value="International">International</option>
+                                <option value="otra">Otra</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
 
-            <label for="unidad_id">ID </label>
-            <input type="text" id="unidad_id" name="unidad_id" required placeholder="Ej. TX-01234">
+                <!-- CARD 2: Checklist Mecánico -->
+                <div class="form-card">
+                    <div class="card-header">
+                        <i class="fas fa-tools"></i>
+                        <h3>Inspección Mecánica</h3>
+                    </div>
+                    <p class="card-subtitle">Verifica estos puntos críticos</p>
 
-            <label for="placas">Placas</label>
-            <input type="text" id="placas" name="placas" placeholder="Ej. ABC-123-D">
+                    <div class="checklist-grid">
+                        <div class="check-item">
+                            <label for="nivel_aceite">Nivel de Aceite</label>
+                            <select id="nivel_aceite" name="nivel_aceite">
+                                <option value="ok">✅ OK / Lleno</option>
+                                <option value="bajo">⚠️ Bajo</option>
+                                <option value="critico">🔴 Crítico</option>
+                            </select>
+                        </div>
 
-            <label for="marca">Marca</label>
-            <select id="marca" name="marca" required>
-                <option value="">Selecciona…</option>
-                <option value="Toyota">Toyota</option>
-                <option value="Ford">Ford</option>
-                <option value="volvo">Volvo</option>
-                <option value="otra">Otra</option>
-            </select>
+                        <div class="check-item">
+                            <label for="presion_neumaticos">Presión de Llantas</label>
+                            <select id="presion_neumaticos" name="presion_neumaticos">
+                                <option value="ok">✅ Correcta</option>
+                                <option value="baja">⚠️ Baja</option>
+                                <option value="muy_baja">🔴 Muy baja</option>
+                            </select>
+                        </div>
 
-            <label for="tipo_unidad">Tipo de unidad</label>
-            <select id="tipo_unidad" name="tipo_unidad" required>
-                <option value="">Selecciona…</option>
-                <option value="tractocamion">Tractocamión</option>
-                <option value="camioneta">camioneta</option>
-                <option value="otro">Otro</option>
-            </select>
+                        <div class="check-item">
+                            <label for="luces_funcionando">Estado de Luces</label>
+                            <select id="luces_funcionando" name="luces_funcionando">
+                                <option value="si">✅ Funcionan</option>
+                                <option value="no">🔴 Fundidas</option>
+                            </select>
+                        </div>
 
-            <label for="kilometraje">Kilometraje</label>
-            <input type="number" id="kilometraje" name="kilometraje" required min="0" step="1" placeholder="Ej. 245000">
-        </div>
+                        <div class="check-item">
+                            <label for="frenos_ok">Respuesta de Frenos</label>
+                            <select id="frenos_ok" name="frenos_ok">
+                                <option value="si">✅ Responden</option>
+                                <option value="no">🔴 Largos/Débiles</option>
+                            </select>
+                        </div>
 
-  <div>
-    <h3>Checklist mecánico</h3>
+                        <div class="check-item">
+                            <label for="liquido_frenos">Líquido de Frenos</label>
+                            <select id="liquido_frenos" name="liquido_frenos">
+                                <option value="ok">✅ OK</option>
+                                <option value="bajo">⚠️ Bajo</option>
+                                <option value="critico">🔴 Crítico</option>
+                            </select>
+                        </div>
 
-    <label for="nivel_aceite">Nivel de aceite</label>
-    <select id="nivel_aceite" name="nivel_aceite" required>
-      <option value="">Selecciona…</option>
-      <option value="ok">OK</option>
-      <option value="bajo">Bajo</option>
-      <option value="critico">Crítico</option>
-    </select>
+                        <div class="check-item">
+                            <label for="condicion_operacion">Tipo de Ruta</label>
+                            <select id="condicion_operacion" name="condicion_operacion">
+                                <option value="">Selecciona...</option>
+                                <option value="urbano">Urbano</option>
+                                <option value="carretera">Carretera</option>
+                                <option value="mixto">Mixto</option>
+                                <option value="pendientes">Con pendientes</option>
+                            </select>
+                        </div>
+                    </div>
 
-    <label for="presion_neumaticos">Presión de neumáticos</label>
-    <select id="presion_neumaticos" name="presion_neumaticos" required>
-      <option value="">Selecciona…</option>
-      <option value="ok">OK</option>
-      <option value="baja">Baja</option>
-      <option value="muy_baja">Muy baja</option>
-    </select>
+                    <!-- Alerta si hay items críticos -->
+                    <div id="critical-alert" class="critical-alert hidden">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <div>
+                            <strong>Items críticos detectados</strong>
+                            <p>Se recomienda consultar con Trax-Bot antes de salir</p>
+                        </div>
+                    </div>
+                </div>
 
-    <label for="luces_funcionando">Luces funcionando</label>
-    <select id="luces_funcionando" name="luces_funcionando" required>
-      <option value="">Selecciona…</option>
-      <option value="si">Sí</option>
-      <option value="no">No</option>
-    </select>
+                <!-- Botón Submit -->
+                <button type="submit" class="btn-submit">
+                    <i class="fas fa-paper-plane"></i> Enviar Reporte de Salida
+                </button>
+            </form>
+        </section>
 
-    <label for="frenos_ok">Frenos responden bien</label>
-    <select id="frenos_ok" name="frenos_ok" required>
-      <option value="">Selecciona…</option>
-      <option value="si">Sí</option>
-      <option value="no">No</option>
-    </select>
-
-    <label for="liquido_frenos">Nivel de líquido de frenos</label>
-    <select id="liquido_frenos" name="liquido_frenos" required>
-      <option value="">Selecciona…</option>
-      <option value="ok">OK</option>
-      <option value="bajo">Bajo</option>
-      <option value="critico">Crítico</option>
-    </select>
-
-    <label for="codigos_falla">Códigos de falla (telemetría)</label>
-    <input type="text" id="codigos_falla" name="codigos_falla" placeholder="Ej. P0420, P0301">
-</div>
-
-
-  <div>
-    <h3>Operación</h3>
-
-    <label for="condicion_operacion">Condición de operación</label>
-    <select id="condicion_operacion" name="condicion_operacion" required>
-      <option value="">Selecciona…</option>
-      <option value="urbano">Urbano (alto tráfico)</option>
-      <option value="carretera">Carretera</option>
-      <option value="mixto">Mixto</option>
-      <option value="pendientes">Ruta con pendientes</option>
-      <option value="clima_extremo">Clima extremo_
-
-    </div>
-
-
-    <input type="submit" value="Enviar">
+    </main>   
 
 <!--Fin de Formulario-->
 
-    </main>
 
 <!--Footer-->
 
