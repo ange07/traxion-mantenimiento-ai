@@ -13,24 +13,41 @@
     </header>
 
     <main>
-        <!--Formulario-->
-            <section>
+
+<!--Formulario-->
+
+        <form action="#" method="post">
+
             <h2>Datos de la unidad</h2>
-                <form>
-                    Tipo de unidad
-                    <input type="text" name="tipo_unidad" />
-                    </label>
-                    <label>
-                    Kilometraje
-                    <input type="number" name="kilometraje" />
-                    </label>
-                    <label>
-                    Hábitos de conducción (nota)
-                    <textarea name="habitos_conduccion" rows="3"></textarea>
-                    </label>
-                    <button type="submit">Evaluar (demo)</button>
-                </form>
-            </section>
+
+            <label for="nombre">Nivel de aceite:</label><br>
+            <input type="number" id="dato_de_formulario" name="nivel de aceite" required><br>
+
+            <label for="nombre">Presión de neumáticos:</label><br>
+            <input type="number" id="dato_de_formulario" name="Presión de neumáticos" required><br>
+
+            <label for="nombre">Luces funcionando:</label><br>
+            <input type="number" id="dato_de_formulario" name="Luces funcionando" required><br>
+
+            <label for="nombre">Frenos responden bien:</label><br>
+            <input type="number" id="dato_de_formulario" name="Frenos responden bien" required><br>
+
+            <label for="nombre">Nivel de líquido de frenos:</label><br>
+            <input type="number" id="dato_de_formulario" name="Nivel de líquido de frenos" required><br>
+
+            <label for="email">Correo electronico:</label>
+            <input type="email" id="dato_de_formulario" name="correo electronico" required><br>
+
+            <label for="mensaje">Mensaje adicional:</label><br>
+            <textarea name="mensaje" id="dato_de_formulario" rows="4" required></textarea><br>
+
+            <input type="submit" value="Enviar">
+            <button type="submit">Evaluar (demo)</button>
+            
+        </form>
+<!--Formulario-->
+
+
     </main>
 
 
