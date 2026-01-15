@@ -4,8 +4,8 @@
 :root {
     --traxion-lime: #d0dd00;
     --traxion-lime-dark: #afb42b;
-    --traxion-dark: #333333;
-    --traxion-gray: #666666;
+    --traxion-dark: #2d2b2b;
+    --traxion-gray: #403d3d;
     --light-bg: #F5F7FA;
     --white: #FFFFFF;
     --border-color: #dddddd;
@@ -425,7 +425,7 @@ body {
 }
 
 /* ===================================
-   CHATBOT FLOTANTE (WIDGET STYLE)
+   CHATBOT FLOTANTE
    =================================== */
 
 /* Tooltip del Chatbot */
@@ -881,7 +881,3 @@ body {
         display: none !important; /* Ocultar en móviles muy pequeños */
     }
 }
-
-
-
-
