@@ -73,7 +73,7 @@
                     
                     <div class="form-row">
                         <div class="input-group">
-                            <label for="unidad_id">ID Económico</label>
+                            <label for="unidad_id">ID</label>
                             <input type="text" id="unidad_id" name="unidad_id" required placeholder="Ej. TX-01234">
                         </div>
                         <div class="input-group">
@@ -211,6 +211,68 @@
                 <a href="#">Mas información</a>
             </p>
         <button id="acceptCookies" class="button small">Aceptar</button>
+    </div>
+
+    <!-- Tooltip del Chatbot -->
+    <div id="chatbot-tooltip" class="chatbot-tooltip">
+        <div class="tooltip-content">
+            <strong>¿Notas algo raro en tu unidad?</strong>
+            <p>Pregúntale al <span style="color: var(--traxion-lime);">Ingeniero Trax-Bot</span></p>
+        </div>
+        <button class="tooltip-close" id="tooltip-close">✕</button>
+    </div>
+    
+    <!-- Botón Flotante -->
+    <button id="chatbot-toggle" class="chatbot-fab" aria-label="Abrir Trax-Bot">
+        <i class="fas fa-robot"></i>
+    </button>
+
+
+ <!-- CHATBOT TIPO WIDGET FLOTANTE -->
+    <!-- Modal del Chatbot -->
+    <div id="chatbot-modal" class="chatbot-modal hidden">
+        <div class="chatbot-container">
+            <!-- Header del Chat -->
+            <div class="chatbot-header">
+                <div class="chatbot-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="chatbot-info">
+                    <h4>Trax-Bot</h4>
+                    <span class="status-dot"></span>
+                    <small>En línea</small>
+                </div>
+                <button id="chatbot-close" class="chatbot-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Área de Mensajes -->
+            <div class="chatbot-messages" id="chatbot-messages">
+                <!-- Mensaje de bienvenida -->
+                <div class="message bot-message">
+                    <div class="message-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-bubble">
+                        <p>¡Hola! Soy <strong>Trax-Bot</strong>, tu asistente mecánico 24/7.</p>
+                        <p>¿Notas algo raro en tu unidad? Descríbelo con tus palabras y te ayudo al instante.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input del Chat -->
+            <div class="chatbot-input-area">
+                <textarea 
+                    id="chatbot-input" 
+                    placeholder="Ej: Los frenos suenan raro..."
+                    rows="2"
+                ></textarea>
+                <button id="chatbot-send" class="chatbot-send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
