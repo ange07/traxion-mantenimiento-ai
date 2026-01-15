@@ -1,12 +1,219 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traxión | Sistema de Mantenimiento Preventivo</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Mantenimiento</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 </head>
 <body>
-    
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <img src="Traxion.png" alt="Traxión Logo" class="nav-logo">
+                <span class="brand-text">TRAXIÓN <small>Vida en Movimiento</small></span>
+            </div>
+            <div class="nav-center">
+                <a href="#inicio" class="nav-link active">
+                    <i class="fas fa-home"></i> Inicio
+                </a>
+                <a href="#reporte" class="nav-link">
+                    <i class="fas fa-clipboard-check"></i> Reporte 360°
+                </a>
+                <a href="#historial" class="nav-link">
+                    <i class="fas fa-history"></i> Historial
+                </a>
+            </div>
+            <div class="nav-right">
+                <div class="user-profile">
+                    <span class="user-name">Operador</span>
+                    <div class="avatar"><i class="fas fa-user"></i></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- HERO / BIENVENIDA -->
+
+        <section class="hero-section" id="inicio">
+            <div class="hero-content">
+                <h1>Sistema de Mantenimiento Preventivo</h1>
+                <p class="hero-subtitle">
+                    Completa tu reporte de salida antes de iniciar ruta. 
+                    Si detectas algún problema, usa <strong>Trax-Bot</strong> en cualquier momento.
+                </p>
+            </div>
+        </section>
+
+<!--Formulario-->
+<!-- FORMULARIO DE REPORTE 360° -->
+        <section class="form-section" id="reporte">
+            <form class="report-form" id="formulario-reporte">
+                
+                <!-- Header del Formulario -->
+                <div class="form-title-card">
+                    <h2><i class="fas fa-clipboard-list"></i> Reporte de Salida 360°</h2>
+                    <p>Completa esta inspección antes de salir a ruta</p>
+                </div>
+
+                <!-- CARD 1: Datos de Unidad -->
+                <div class="form-card">
+                    <div class="card-header">
+                        <i class="fas fa-truck"></i>
+                        <h3>Datos de la Unidad</h3>
+                    </div>
+                    <p class="card-subtitle">Identifica tu vehículo</p>
+                    
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="unidad_id">ID Económico</label>
+                            <input type="text" id="unidad_id" name="unidad_id" required placeholder="Ej. TX-01234">
+                        </div>
+                        <div class="input-group">
+                            <label for="placas">Placas</label>
+                            <input type="text" id="placas" name="placas" placeholder="Ej. ABC-123-D">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="kilometraje">Kilometraje</label>
+                            <input type="number" id="kilometraje" name="kilometraje" placeholder="245000">
+                        </div>
+                        <div class="input-group">
+                            <label for="marca">Marca</label>
+                            <select id="marca" name="marca">
+                                <option value="">Selecciona...</option>
+                                <option value="Volvo">Volvo</option>
+                                <option value="Kenworth">Kenworth</option>
+                                <option value="Freightliner">Freightliner</option>
+                                <option value="International">International</option>
+                                <option value="otra">Otra</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 2: Checklist Mecánico -->
+                <div class="form-card">
+                    <div class="card-header">
+                        <i class="fas fa-tools"></i>
+                        <h3>Inspección Mecánica</h3>
+                    </div>
+                    <p class="card-subtitle">Verifica estos puntos críticos</p>
+
+                    <div class="checklist-grid">
+                        <div class="check-item">
+                            <label for="nivel_aceite">Nivel de Aceite</label>
+                            <select id="nivel_aceite" name="nivel_aceite">
+                                <option value="ok">✅ OK / Lleno</option>
+                                <option value="bajo">⚠️ Bajo</option>
+                                <option value="critico">🔴 Crítico</option>
+                            </select>
+                        </div>
+
+                        <div class="check-item">
+                            <label for="presion_neumaticos">Presión de Llantas</label>
+                            <select id="presion_neumaticos" name="presion_neumaticos">
+                                <option value="ok">✅ Correcta</option>
+                                <option value="baja">⚠️ Baja</option>
+                                <option value="muy_baja">🔴 Muy baja</option>
+                            </select>
+                        </div>
+
+                        <div class="check-item">
+                            <label for="luces_funcionando">Estado de Luces</label>
+                            <select id="luces_funcionando" name="luces_funcionando">
+                                <option value="si">✅ Funcionan</option>
+                                <option value="no">🔴 Fundidas</option>
+                            </select>
+                        </div>
+
+                        <div class="check-item">
+                            <label for="frenos_ok">Respuesta de Frenos</label>
+                            <select id="frenos_ok" name="frenos_ok">
+                                <option value="si">✅ Responden</option>
+                                <option value="no">🔴 Largos/Débiles</option>
+                            </select>
+                        </div>
+
+                        <div class="check-item">
+                            <label for="liquido_frenos">Líquido de Frenos</label>
+                            <select id="liquido_frenos" name="liquido_frenos">
+                                <option value="ok">✅ OK</option>
+                                <option value="bajo">⚠️ Bajo</option>
+                                <option value="critico">🔴 Crítico</option>
+                            </select>
+                        </div>
+
+                        <div class="check-item">
+                            <label for="condicion_operacion">Tipo de Ruta</label>
+                            <select id="condicion_operacion" name="condicion_operacion">
+                                <option value="">Selecciona...</option>
+                                <option value="urbano">Urbano</option>
+                                <option value="carretera">Carretera</option>
+                                <option value="mixto">Mixto</option>
+                                <option value="pendientes">Con pendientes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Alerta si hay items críticos -->
+                    <div id="critical-alert" class="critical-alert hidden">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <div>
+                            <strong>Items críticos detectados</strong>
+                            <p>Se recomienda consultar con Trax-Bot antes de salir</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botón Submit -->
+                <button type="submit" class="btn-submit">
+                    <i class="fas fa-paper-plane"></i> Enviar Reporte de Salida
+                </button>
+            </form>
+        </section>
+
+    </main>   
+
+<!--Fin de Formulario-->
+
+
+<!--Footer-->
+
+    <footer class="footer">
+        <p>Propiedad intelectual del Traxion y su contenido:
+            D.R. © Mantenimientos preventivos Traxion. Todos los derechos reservados.
+        </p>
+        <div class="footer-content">
+            <h4>Hackathon Bécalos Traxión Tech Challenge</h4>
+            <p class="credits">Desarrollado por: Angélica Chin • Javier Martínez • Alfredo Gutiérrez</p>
+            <div class="footer-links">
+                        <a href="#">Privacidad</a>
+                        <a href="#">Terminos</a>
+                        <a href="#">¡Contactanos!</a>
+            </div>
+    </footer>
+
+<!--Cookie banner-->
+
+    <div id="cookieBanner" class="cookie-banner" >
+            <p>
+                    Usamos cookies para mejorar tu experiencia. Al continuar, aceptas el uso de cookies.
+                <a href="#">Mas información</a>
+            </p>
+        <button id="acceptCookies" class="button small">Aceptar</button>
+    </div>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
