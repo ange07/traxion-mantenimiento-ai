@@ -1,3 +1,9 @@
 * {
     background-color: #cedd00a8
 }
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 10px;
+    color: rgb(11, 11, 11);
+}
