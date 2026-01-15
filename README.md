@@ -6,6 +6,9 @@
 
 Prototipo funcional de interfaz web que permite a los operadores de camiones de Traxión realizar inspecciones preventivas antes de salir a ruta, mediante un **Reporte 360°**, y consultar en tiempo real con un asistente de inteligencia artificial (**Ingeniero Trax-Bot**) cuando detectan problemas mecánicos. El sistema prioriza la seguridad, traduciendo reportes coloquiales en diagnósticos técnicos estructurados.
 
+##🔗 **Demo en Vivo**
+Puedes acceder al sistema desplegado aquí: https://ange07.github.io/traxion-mantenimiento-ai/
+
 ## 🚀 Funcionalidades Clave
 * **Reporte de Salida 360°**: Formulario pre-ruta para capturar datos de la unidad (ID, placas, kilometraje) y validar el estado de la unidad (frenos, neumáticos, niveles y luces).
 * **Validación Crítica en Tiempo Real**: El sistema de Salida 360º analiza automáticamente campos críticos (por medio de Javascript) como niveles de aceite, presión de llantas y estado de frenos, disparando alertas visuales si se detecta un riesgo operativo.
